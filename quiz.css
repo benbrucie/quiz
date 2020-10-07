@@ -40,12 +40,26 @@
 }
 
 .hud-prefix{
-	margin-right: 120px;
+	margin-right: 200px;
 	text-align: center;
 	font-size: 2rem;
 }
 
+
 .hud-main-text{
-	margin-right: 120px;
+	margin-right: 200px;
 	text-align: center;
+}
+
+#progressBar{
+	width: 20rem;
+	height: 4rem;
+	border: 0.3rem solid #191970;
+	margin-top: 1.5rem;
+}
+
+#progressBarFull{
+	height: 3.6rem;
+	background-color: #191970;
+	width: 0%;
 }
