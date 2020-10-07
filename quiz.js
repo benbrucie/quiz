@@ -1,6 +1,6 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const questionCounterText = document.getElementById('questionCounter');
+const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
 
 let currentQuestion = {};
@@ -56,7 +56,7 @@ function getNewQuestion()
    }
 
 	 questionCounter++;
-   questionCounterText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+   progressText.innerText = 'Question ' + questionCounter + "/" + MAX_QUESTIONS;
 
 
 	 const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -87,7 +87,7 @@ choices.forEach(choice => {
      if (classToApply === 'correct'){
        increamentScore(CORRECT_BONUS);
      }
-     
+
      selectedChoice.parentElement.classList.add(classToApply);
 
      setTimeout(() => {
