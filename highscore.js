@@ -1,3 +1,4 @@
+//Reference: https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/
 const highScoreList = document.getElementById("highScoreList");
 const highscore = JSON.parse(localStorage.getItem("highScore")) || [];
 

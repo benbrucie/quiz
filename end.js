@@ -1,3 +1,4 @@
+//Reference: https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
@@ -25,4 +26,3 @@ saveHighScore = e =>{
   localStorage.setItem("highScore", JSON.stringify(highScore));
   window.location.assign("index.html");
 };
- 
