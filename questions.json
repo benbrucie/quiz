@@ -22,5 +22,21 @@
 			"choice3": "MB>GB>TB>KB",
 			"choice4": "GB>MB>KB>TB",
 			"answer": 2
-	}
+	},
+  {
+      "question": "Which one of these stores more data than a DVD ?",
+			"choice1": "CD Rom",
+			"choice2": "Red Ray Disk",
+			"choice3": "Floppy",
+			"choice4": "Blue Ray Disk",
+			"answer": 4
+	},
+  {
+			"question": "Eight Bits make up a ...............",
+			"choice1": "byte",
+      "choice2": "megabyte",
+			"choice3": "C.kilobyteD.",
+			"choice4": "None",
+			"answer": 1
+    }
 ]

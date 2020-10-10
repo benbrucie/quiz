@@ -9,48 +9,22 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let questions = [
-  {
-			question: "Name of the screen that recognizes touch input is :",
-			choice1: "Recog screen",
-			choice2: "Point Screen",
-			choice3: "Touch Screen",
-			choice4: "Android Screen",
-			answer: 3
-	},
-	{
-			question: "Identify the device through which data and instructions are entered into a computer",
-			choice1: "Software",
-			choice2: "Input Device",
-			choice3: "Output Device",
-			choice4: "Memory",
-			answer: 2
-	},
-	{
-			question: "Arrange in ascending order the units of memory TB, KB, GB, MB",
-			choice1: "TB>MB>GB>KB",
-			choice2: "TB>GB>MB>KB",
-			choice3: "MB>GB>TB>KB",
-			choice4: "GB>MB>KB>TB",
-			answer: 2
-	},
-  {
-			question: "Which one of these stores more data than a DVD ?",
-			choice1: "CD Rom",
-			choice2: "Red Ray Disk",
-			choice3: "Floppy",
-			choice4: "Blue Ray Disk",
-			answer: 4
-	},
-  {
-			question: "Eight Bits make up a ...............",
-			choice1: "byte",
-			choice2: "megabyte",
-			choice3: "C.kilobyteD.",
-			choice4: "None",
-			answer: 1
-	}
-];
+
+let questions = [];
+
+fetch("questions.json")
+  .then(res => {
+    return res.json();
+}).then(loadedQuestions => {
+  console.log(loadedQuestions);
+  questions = loadedQuestions;
+  startQuiz();
+});
+
+.catch( err =>{
+  console.log(err);
+});
+
 //My CONSTANTS
 const CORRECT_BONUS = 1;
 const MAX_QUESTIONS = 3;
@@ -108,4 +82,4 @@ increamentScore = num => {
 score +=num;
 scoreText.innerText = score;
 }
-startQuiz();
+//startQuiz();
