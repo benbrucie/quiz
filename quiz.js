@@ -37,15 +37,15 @@ fetch(
 
     answerChoices.forEach((choice, index) => {
         formattedQuestion["choice" + (index + 1)] = choice;
-    });
+    })
 
     return formattedQuestion;
 });
   startQuiz();
 })
-.catch(err =>{
+/*.catch(err =>{
   console.log(err);
-});
+});*/
 
 //My CONSTANTS
 const CORRECT_BONUS = 1;
